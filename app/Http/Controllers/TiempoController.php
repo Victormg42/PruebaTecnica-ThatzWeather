@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tiempo;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TiempoController extends Controller
 {
@@ -89,5 +91,30 @@ class TiempoController extends Controller
 
     public function consulta() {
         return view('tiempo');
+    }
+
+    public function InsertOrUpdate(Request $request) {
+        $cpostal = $request->input('cpostal');
+        $nombre = $request->input('nombre');
+        $temp = $request->input('temperatura');
+        try {
+            $ciudad=DB::select('SELECT * FROM tbl_ciudad WHERE nombre= ?', [$nombre]);
+            $count = count($ciudad);
+            if ($count == 0) {
+                DB::table('tbl_ciudad')->insertGetId(['nombre' =>$nombre, 'cp'=>$cpostal, 'temperatura'=>$temp]);
+            } else {
+                DB::update('UPDATE `tbl_ciudad` SET `temperatura`= ? WHERE nombre= ?', [$temp, $nombre]);
+            }
+            return response()->json(array('resultado'=>'OK'),200);
+        } catch (\Throwable $th) {
+            return response()->json(array('resultado'=>'NOK '. $th->getMessage()),200);
+        }
+    }
+
+    public function readTop(Request $request) {
+        $request->except('_token');
+        //$mostrar = DB::table('tbl_ciudad')->get();
+        $mostrar = DB::select('SELECT * FROM tbl_ciudad ORDER BY temperatura ASC LIMIT 5');
+        return response()->json($mostrar, 200);
     }
 }

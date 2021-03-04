@@ -29,6 +29,7 @@ form {
     margin-left: 10%;
     margin-top: 3%;
     color: white;
+    float: left;
 }
 
 .img_temp {
@@ -39,4 +40,23 @@ form {
     margin-left: 25%;
     font-size: 43px;
     margin-top: -19%;
+}
+
+.top5 {
+    background-color: #306c77;
+    color: white;
+    width: 30%;
+    float: left;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.top5-temp {
+    float: left;
+    font-size: 40px;
+    margin-right: 30px;
+}
+
+hr {
+    border-color: white;
 }

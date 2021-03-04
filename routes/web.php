@@ -19,3 +19,5 @@ use App\Http\Controllers\TiempoController;
 });*/
 Route::get('/', [TiempoController::class, 'home']);
 Route::get('consulta', [TiempoController::class, 'consulta']);
+Route::post('InsertOrUpdate', [TiempoController::class, 'InsertOrUpdate']);
+Route::post('readTop', [TiempoController::class, 'readTop']);
