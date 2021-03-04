@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,19 +16,23 @@
     <title>ThatzWeather</title>
 </head>
 <body>
-    <div class="container mt-5">
-    <img class="img-fluid img" src="{{asset('img/Bitmap.png')}}">
+    <div class="container container-sm mt-5">
+        <img class="img-fluid img" src="{{asset('img/Bitmap.png')}}">
+        <form style="margin-top: -6%; margin-left: 10%;" method="GET" action="{{url('/')}}">
+            <input class="btn btn-primary" type="submit" name="Volver" value="Volver">
+        </form>
     </div>
-
+    
     <input type="hidden" name="postal" id="postal" value="{{$_GET['cpostal']}}"></input>
 
     <div class="container tiempo" id="tiempo">
 
     </div>
-
+    
     <div class="container top5" id="top5">
         
     </div>
+    
 
 </body>
 </html>

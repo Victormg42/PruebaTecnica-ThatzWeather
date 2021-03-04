@@ -6,7 +6,9 @@ body {
 }
 
 .img {
-    margin-left: 22%;
+    margin-top: -20px;
+    margin-left: 35%;
+    width: 30%;
 }
 
 form {
@@ -25,7 +27,7 @@ form {
 .tiempo {
     background-color: #306c77;
     width: 50%;
-    height: 250px;
+    height: 345px;
     margin-left: 10%;
     margin-top: 3%;
     color: white;
@@ -34,6 +36,12 @@ form {
 
 .img_temp {
     width: 25%;
+}
+
+.img_temp1 {
+    width: 12%;
+    margin-left: 35px;
+    margin-top: 8px;
 }
 
 .weather_temp {
@@ -49,6 +57,7 @@ form {
     float: left;
     margin-left: 30px;
     margin-top: 40px;
+    margin-bottom: 10px;
 }
 
 .top5-temp {
@@ -59,4 +68,12 @@ form {
 
 hr {
     border-color: white;
+}
+
+.weather_main::first-letter {
+    text-transform: uppercase;
+}
+
+.texto p {
+    margin-left: -50px;
 }
