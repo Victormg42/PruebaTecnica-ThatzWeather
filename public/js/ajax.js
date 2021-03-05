@@ -44,7 +44,7 @@ function readTiempo() {
                 tabla += '<p class="weather_temp">' + temp.main.temp + '°</p>';
                 tabla += '<input type="hidden" name="temperatura" id="temperatura" value="' + temp.main.temp + '">';
                 tabla += '<hr>';
-                tabla += '<div class="ml-3 row justify-content-center justify-content-md-start" id="dias">';
+                tabla += '<div class="row justify-content-center justify-content-md-start" id="dias">';
                 tabla += '</div>';
             }
             section.innerHTML = tabla;
