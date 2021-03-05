@@ -84,15 +84,15 @@ class TiempoController extends Controller
     {
         //
     }
-
+    // Devuelve a la vista principal //
     public function home() {
         return view('home');
     }
-
+    // Devuelve a la vista de tiempo, donde se muestra la consulta //
     public function consulta() {
         return view('tiempo');
     }
-
+    // Función que nos permite comprobar si el codigo postal ya existe, si existe actualiza los datos con la temperatura //
     public function InsertOrUpdate(Request $request) {
         $cpostal = $request->input('cpostal');
         $nombre = $request->input('nombre');
@@ -110,7 +110,7 @@ class TiempoController extends Controller
             return response()->json(array('resultado'=>'NOK '. $th->getMessage()),200);
         }
     }
-
+    // Hacemos una consulta a la base de datos que nos devuelve las cinco temperaturas mas frias. //
     public function readTop(Request $request) {
         $request->except('_token');
         //$mostrar = DB::table('tbl_ciudad')->get();
