@@ -1,0 +1,79 @@
+body {
+    background: url(../img/mohammad-alizade-S5uV7ro4UPY-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Mulish', sans-serif;
+}
+
+.img {
+    margin-top: -20px;
+    margin-left: 35%;
+    width: 30%;
+}
+
+form {
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.input-postal {
+    width: 60%;
+}
+
+.input-submit {
+    width: 60%;
+}
+
+.tiempo {
+    background-color: #306c77;
+    width: 50%;
+    height: 345px;
+    margin-left: 10%;
+    margin-top: 3%;
+    color: white;
+    float: left;
+}
+
+.img_temp {
+    width: 25%;
+}
+
+.img_temp1 {
+    width: 12%;
+    margin-left: 35px;
+    margin-top: 8px;
+}
+
+.weather_temp {
+    margin-left: 25%;
+    font-size: 43px;
+    margin-top: -19%;
+}
+
+.top5 {
+    background-color: #306c77;
+    color: white;
+    width: 30%;
+    float: left;
+    margin-left: 30px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.top5-temp {
+    float: left;
+    font-size: 40px;
+    margin-right: 30px;
+}
+
+hr {
+    border-color: white;
+}
+
+.weather_main::first-letter {
+    text-transform: uppercase;
+}
+
+.texto p {
+    margin-left: -50px;
+}

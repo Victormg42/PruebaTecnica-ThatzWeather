@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TiempoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+Route::get('/', [TiempoController::class, 'home']);
+Route::get('consulta', [TiempoController::class, 'consulta']);
+Route::post('InsertOrUpdate', [TiempoController::class, 'InsertOrUpdate']);
+Route::post('readTop', [TiempoController::class, 'readTop']);
