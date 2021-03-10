@@ -40,11 +40,11 @@ function readTiempo() {
                 tabla += '<p>Ciudad: <strong>' + temp.name + '</strong></p>';
                 tabla += '<input type="hidden" name="nombre" id="nombre" value="' + temp.name + '">';
                 tabla += '<p class="weather_main">' + temp.weather[0].description + '</p>';
-                tabla += "<img class='img_temp' src='http://openweathermap.org/img/w/" + temp.weather[0].icon + ".png'>";
+                tabla += "<img class='img-fluid img_temp' src='http://openweathermap.org/img/w/" + temp.weather[0].icon + ".png'>";
                 tabla += '<p class="weather_temp">' + temp.main.temp + '°</p>';
                 tabla += '<input type="hidden" name="temperatura" id="temperatura" value="' + temp.main.temp + '">';
                 tabla += '<hr>';
-                tabla += '<div class="row justify-content-center justify-content-md-start" id="dias">';
+                tabla += '<div class="row justify-content-center justify-content-sm-start" id="dias">';
                 tabla += '</div>';
             }
             section.innerHTML = tabla;
